@@ -1,19 +1,25 @@
-import { ConnectKitButton } from 'connectkit'
+// import { ConnectKitButton } from 'connectkit'
 
-import { useAccount } from 'wagmi'
+// import { useAccount } from 'wagmi'
+import Navbar from './component/Navbar';
 
 function App() {
 
 
   return (
     <>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '20vh' }}>
+    <Navbar />
+    {/* <TopLayout/> */}
+      {/* <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '20vh' }}>
         <ConnectKitButton />
 
         <div style={{ marginTop: '20px' }}>
         <MyComponent />
         </div>
-      </div>
+
+
+
+      </div> */}
     </>
   )
 }
@@ -21,9 +27,9 @@ function App() {
 
 export default App
 
-const MyComponent = () => {
-  const { address, isConnecting, isDisconnected } = useAccount();
-  if (isConnecting) return <div>Connecting...</div>;
-  if (isDisconnected) return <div>Disconnected</div>;
-  return <div>Connected Wallet: {address}</div>;
-};
+// const MyComponent = () => {
+//   const { address, isConnecting, isDisconnected } = useAccount();
+//   if (isConnecting) return <div>Connecting...</div>;
+//   if (isDisconnected) return <div>Disconnected</div>;
+//   return <div>Connected Wallet: {address}</div>;
+// };

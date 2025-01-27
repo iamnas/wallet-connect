@@ -4,6 +4,8 @@ import './index.css'
 import App from './App.tsx'
 import { Web3Provider } from './component/Web3Provider.tsx'
 
+import './i18n'
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Web3Provider>
